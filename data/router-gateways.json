@@ -1,0 +1,47 @@
+[
+  {
+    "brand": "TP-Link",
+    "default_ip": "192.168.0.1",
+    "fallback_ip": "192.168.1.1",
+    "default_domain": "tplinkwifi.net",
+    "default_username": "admin",
+    "subnet_mask": "255.255.255.0",
+    "protocol": "http"
+  },
+  {
+    "brand": "Netgear",
+    "default_ip": "192.168.1.1",
+    "fallback_ip": "192.168.0.1",
+    "default_domain": "routerlogin.net",
+    "default_username": "admin",
+    "subnet_mask": "255.255.255.0",
+    "protocol": "http"
+  },
+  {
+    "brand": "Asus",
+    "default_ip": "192.168.1.1",
+    "fallback_ip": "192.168.50.1",
+    "default_domain": "router.asus.com",
+    "default_username": "admin",
+    "subnet_mask": "255.255.255.0",
+    "protocol": "https"
+  },
+  {
+    "brand": "Linksys",
+    "default_ip": "192.168.1.1",
+    "fallback_ip": "192.168.0.1",
+    "default_domain": "myrouter.local",
+    "default_username": "admin",
+    "subnet_mask": "255.255.255.0",
+    "protocol": "http"
+  },
+  {
+    "brand": "D-Link",
+    "default_ip": "192.168.0.1",
+    "fallback_ip": "192.168.1.1",
+    "default_domain": "dlinkrouter.local",
+    "default_username": "admin",
+    "subnet_mask": "255.255.255.0",
+    "protocol": "http"
+  }
+]
