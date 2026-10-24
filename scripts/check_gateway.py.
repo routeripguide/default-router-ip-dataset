@@ -1,0 +1,26 @@
+import platform
+import subprocess
+import re
+
+def get_default_gateway():
+    os_name = platform.system().lower()
+    gateway = None
+    
+    try:
+        if "windows" in os_name:
+            out = subprocess.check_output("ipconfig", shell=True).decode()
+            match = re.search(r"Default Gateway[ .]*: ([\d.]+)", out)
+            if match:
+                gateway = match.group(1)
+        else:
+            out = subprocess.check_output(["ip", "route"]).decode()
+            match = re.search(r"default via ([\d.]+)", out)
+            if match:
+                gateway = match.group(1)
+    except Exception as e:
+        return f"Error detecting gateway: {e}"
+        
+    return gateway or "Gateway not found"
+
+if __name__ == "__main__":
+    print(f"Detected Local Gateway: {get_default_gateway()}")
